@@ -31,6 +31,7 @@ int main(){
     char query[256];
     char answer[256];
     while(1){
+        printf(": ");
         if(scanf(" %255[^\n]", query) != 1) break;
         if(strcmp("bye", query) == 0){
             printf("I sEE YuO!\n");
@@ -39,6 +40,7 @@ int main(){
         int found = 0;
         for(int i = 0; i < size; i++){
             if(strcmp(db[i].question, query) == 0){
+                printf("-> ");
                 printf("%s\n", db[i].answer);
                 found = 1;
                 break;
